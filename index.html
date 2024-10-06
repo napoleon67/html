@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob Co Site</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-between; /* İçeriği sağa ve sola yayar */
+            align-items: center; /* Dikey olarak ortalar */
+            height: 100vh;
+            margin: 0;
+            background-color: #007BFF; /* Arka plan rengi mavi */
+            color: white; /* Metin rengini beyaz yaptık */
+            text-align: left; /* Metin hizalamasını sola al */
+            padding: 0 350px; /* Kenarlardan biraz boşluk */
+        }
+
+        .text-container {
+            max-width: 50%; /* Metin alanının genişliğini ayarla */
+        }
+
+        .moving-image {
+            width: 300px; /* Resmin genişliği */
+            height: auto; /* Orantılı yükseklik */
+            animation: move 2s infinite alternate;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateY(-100px);
+            }
+            100% {
+                transform: translateY(0); /* Yukarı hareket miktarı */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        <h1>Merhaba arkadaşım</h1>
+        <p>Bu benim sitem</p>
+        <p>Ve bu Bob Co sitesi</p>
+        <h2>Ve bu Bob'un karşılaştırması</h2>
+        <p>Bob, 3×3×3 cm bir küp</p>
+        <p>Ve bununla ilgili başka şeyler</p>
+    </div>
+    
+    <div class="container">
+        <img src="kivi.jpg" alt="kivi" class="moving-image">
+    </div>
+</body>
+</html>
