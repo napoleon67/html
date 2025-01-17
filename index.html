@@ -3,100 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bob Co Site</title>
+    <title>Basit Site</title>
     <style>
         body {
-            display: flex;
-            justify-content: space-around; /* İçeriği düzgün bir şekilde hizalar */
-            align-items: center; /* Dikey olarak ortalar */
-            height: 100vh;
+            font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #007BFF; /* Arka plan rengi mavi */
-            color: white; /* Metin rengini beyaz yaptık */
-            text-align: left; /* Metin hizalamasını sola al */
-            padding: 20px; /* Kenarlardan biraz boşluk */
-            box-sizing: border-box; /* Padding'in toplam genişlik ve yüksekliğe dahil edilmesini sağlar */
-            flex-wrap: wrap; /* Küçük ekranlarda içeriğin satırlara geçmesine olanak tanır */
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
 
-        .text-container {
-            max-width: 50%; /* Metin alanının genişliğini ayarla */
-            margin-right: 20px; /* Metin ile resim arasına boşluk ekler */
-        }
-
-        .button-container {
-            margin-bottom: 20px; /* Düğmelerin alt boşluğu */
-        }
-
-        .button {
-            padding: 10px 20px;
-            margin: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #28a745; /* Yeşil renk */
+        header {
+            background-color: #333;
             color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none; /* Alt çizgiyi kaldır */
-            display: inline-block; /* Buton gibi görünmesi için */
+            text-align: center;
+            padding: 20px 0;
         }
 
-        .button:hover {
-            background-color: #218838; /* Daha koyu yeşil */
+        main {
+            padding: 20px;
+            text-align: center;
         }
 
-        .moving-image {
-            width: 100%; /* Resmin genişliğini yüzde ile belirle, daha esnek olur */
-            max-width: 300px; /* Resmin maksimum genişliği */
-            height: auto; /* Orantılı yükseklik */
-            animation: move 2s infinite alternate;
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
 
-        @keyframes move {
-            0% {
-                transform: translateY(-100px);
-            }
-            100% {
-                transform: translateY(0); /* Yukarı hareket miktarı */
-            }
+        a {
+            color: #007BFF;
+            text-decoration: none;
         }
 
-        /* Ekran boyutlarına göre düzen değişiklikleri */
-        @media (max-width: 768px) {
-            body {
-                flex-direction: column; /* Küçük ekranlarda dikey düzen */
-                padding: 20px; /* Padding'i arttırabiliriz */
-            }
-
-            .text-container {
-                max-width: 100%; /* Küçük ekranlarda metin genişliğini tam olarak kullan */
-                text-align: center; /* Metni ortalayabiliriz */
-            }
-
-            .moving-image {
-                max-width: 80%; /* Resmin genişliğini biraz daha küçült */
-            }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="text-container">
-        <div class="button-container">
-            <a href="https://www.example1.com" class="button">ana sayfa</a>
-            <a href="жэьвэдэл рэю иэк ищл нщл" class="button">hakkında</a>
-            <a href="https://www.youtube.com/watch?v=aWt9bGilBa0" class="button">☭</a>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button">nothing</a>
-        </div>
-        <h1>Merhaba arkadaşım</h1>
-        <p>Bu benim sitem</p>
-        <p>Ve bu Bob Co sitesi</p>
-        <h2>Ve bu Bob'un karşılaştırması</h2>
-        <p>Bob, 3×3×3 cm bir küp</p>
-        <p>Ve bununla ilgili başka şeyler</p>
-    </div>
-    
-    <div class="container">
-        <img src="kivi.jpg" alt="kivi" class="moving-image">
-    </div>
+
+    <header>
+        <h1>Hoşgeldiniz!</h1>
+        <p>Basit bir site örneği</p>
+    </header>
+
+    <main>
+        <h2>Hakkında</h2>
+        <p>Bu, HTML ve CSS kullanarak yapılmış çok basit bir site örneğidir. Amacımız temel yapı taşlarını göstermek.</p>
+        <p>Daha fazla bilgi için <a href="https://www.example.com">buraya tıklayın</a>.</p>
+    </main>
+
+    <footer>
+        <p>© 2025 Basit Site | Tüm hakları saklıdır.</p>
+    </footer>
+
 </body>
 </html>
