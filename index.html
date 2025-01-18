@@ -9,41 +9,19 @@
         html, body {
             margin: 0;
             padding: 0;
+            height: 100%; /* Sayfa yüksekliği %100 yapıldı */
+            display: flex; /* Flexbox düzeni ile tüm öğeleri ortalayacağız */
+            flex-direction: column; /* Yatayda değil, dikeyde düzeni sağla */
+            justify-content: center; /* Dikeyde ortalama */
+            align-items: center; /* Yatayda ortalama */
             background-color: #A9FFE9;
             color: #333;
             font-family: Arial, sans-serif;
-            height: 100%;
-            overflow-y: auto;
         }
 
-        header {
-            background-color: #00FFBC;
-            color: black;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer {
-            background-color: #00FFBC;
-            color: black;
-            text-align: center;
-            padding: 10px 0;
-            position: relative;
-            width: 100%;
-        }
-
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
+        header, main, footer {
+            width: 100%; /* Bütün içerik genişliğini kullanacak şekilde ayarlandı */
+            text-align: center; /* Yazılar ortalandı */
         }
 
         /* Fotoğraf stili */
@@ -68,27 +46,39 @@
 
         /* Buton stili */
         button {
-            background-color: #00FFBC; /* Buton rengi */
-            color: black; /* Yazı rengi */
-            border: none; /* Sınırları kaldır */
-            padding: 12px 24px; /* İç boşluk */
-            font-size: 16px; /* Yazı boyutu */
-            border-radius: 8px; /* Yuvarlatılmış köşeler */
-            cursor: pointer; /* Fare üzerine geldiğinde imleç değişsin */
-            transition: background-color 0.3s, transform 0.3s; /* Geçiş animasyonu */
-            margin: 20px; /* Buton etrafında boşluk */
-            display: inline-block; /* Butonu hizalamak için */
+            background-color: #00FFBC;
+            color: black;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s ease-in-out;
+            display: inline-block;
+            text-align: center;
+            width: auto;
+            max-width: 300px;
+            margin: 20px;
+            box-sizing: border-box;
         }
 
         button:hover {
-            background-color: #009C7F; /* Hover durumunda renk değişimi */
-            transform: scale(1.05); /* Butonu büyütme efekti */
+            background-color: #009C7F;
+            transform: scale(1.05);
         }
 
         button:focus {
-            outline: none; /* Butonun tıklandığında kenarlık görünmesini engeller */
+            outline: none;
         }
 
+        /* Responsive (Mobil uyumlu butonlar için) */
+        @media (max-width: 768px) {
+            button {
+                width: 90%;
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
     </style>
 </head>
 <body>
