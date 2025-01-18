@@ -53,6 +53,24 @@
             margin-top: 20px;
             border-radius: 10px; /* Kenarlarını yuvarlatabiliriz */
         }
+
+        /* Buton stili */
+        button {
+            background-color: #00FFBC; /* Butonun arka plan rengi */
+            color: black; /* Yazı rengi */
+            font-size: 16px; /* Yazı boyutu */
+            padding: 15px 30px; /* Butonun içindeki boşluk */
+            border: none; /* Kenarlık yok */
+            border-radius: 25px; /* Yuvarlatılmış köşeler */
+            cursor: pointer; /* Fare üzerine gelince tıklanabilir simgesi */
+            transition: background-color 0.3s ease; /* Renk değişimi animasyonu */
+        }
+
+        button:hover {
+            background-color: #007BFF; /* Fare ile üzerine gelindiğinde renk değişimi */
+            color: white; /* Yazı rengini beyaz yap */
+        }
+
     </style>
 </head>
 <body>
@@ -76,6 +94,9 @@
     <footer>
         <p>© frame bank  работа есть везде - довертесь нам!</p>
     </footer>
-<button>купить карту</button>
+
+    <!-- Buton Eklendi -->
+    <button onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';">купить карту</button>
+
 </body>
 </html>
