@@ -12,8 +12,8 @@
             background-color: #A9FFE9;
             color: #333;
             font-family: Arial, sans-serif;
-            height: 100%; /* Tam yükseklik */
-            overflow-y: auto; /* Dikey kaydırma çubuğu */
+            height: 100%;
+            overflow-y: auto;
         }
 
         header {
@@ -33,7 +33,7 @@
             color: black;
             text-align: center;
             padding: 10px 0;
-            position: relative; /* Sabit yerine sayfanın akışında kalır */
+            position: relative;
             width: 100%;
         }
 
@@ -48,30 +48,23 @@
 
         /* Fotoğraf stili */
         .photo-container img {
-            width: 80%;  /* Fotoğraf genişliği */
-            max-width: 600px; /* Maksimum genişlik */
-            height: auto;  /* Orantılı yükseklik */
+            width: 80%;
+            max-width: 600px;
+            height: auto;
             margin-top: 20px;
-            border-radius: 10px; /* Kenarlarını yuvarlatabiliriz */
+            border-radius: 10px;
         }
 
-        /* Buton stili */
-        button {
-            background-color: #00FFBC; /* Butonun arka plan rengi */
-            color: black; /* Yazı rengi */
-            font-size: 16px; /* Yazı boyutu */
-            padding: 15px 30px; /* Butonun içindeki boşluk */
-            border: none; /* Kenarlık yok */
-            border-radius: 25px; /* Yuvarlatılmış köşeler */
-            cursor: pointer; /* Fare üzerine gelince tıklanabilir simgesi */
-            transition: background-color 0.3s ease; /* Renk değişimi animasyonu */
+        /* Fareyi takip eden fotoğraf stili */
+        .floating-photo {
+            position: absolute;
+            width: 100px; /* Fotoğraf genişliği */
+            height: auto;
+            pointer-events: none; /* Fareyle tıklanabilir olmasını engeller */
+            display: none; /* Başlangıçta gizli */
+            border-radius: 10px;
+            z-index: 9999; /* En üstte görünsün */
         }
-
-        button:hover {
-            background-color: #007BFF; /* Fare ile üzerine gelindiğinde renk değişimi */
-            color: white; /* Yazı rengini beyaz yap */
-        }
-
     </style>
 </head>
 <body>
@@ -91,7 +84,7 @@
             <img src="Başlıksız3_20250117224421.png" alt="frame bank 2">
         </div>
         
-        <!-- Buton, fotoğrafların altına yerleştirildi -->
+        <!-- Buton -->
         <button onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';">купить карту</button>
 
     </main>
@@ -100,5 +93,25 @@
         <p>© frame bank  работа есть везде - довертесь нам!</p>
     </footer>
 
+    <!-- Fareyi takip eden küçük fotoğraf -->
+    <img src="Başlıksız4_20250118204203.png" alt="floating photo" class="floating-photo" id="floatingPhoto">
+
+    <script>
+        // Fare hareketini dinle ve küçük fotoğrafı hareket ettir
+        document.addEventListener("mousemove", function (event) {
+            const floatingPhoto = document.getElementById("floatingPhoto");
+            floatingPhoto.style.left = event.pageX + 10 + "px"; // Fareye göre yatay konum
+            floatingPhoto.style.top = event.pageY + 10 + "px"; // Fareye göre dikey konum
+            floatingPhoto.style.display = "block"; // Fotoğrafı göster
+        });
+
+        // Fare sayfadan ayrılırsa fotoğrafı gizle
+        document.addEventListener("mouseleave", function () {
+            const floatingPhoto = document.getElementById("floatingPhoto");
+            floatingPhoto.style.display = "none"; // Fotoğrafı gizle
+        });
+    </script>
+
 </body>
 </html>
+            
