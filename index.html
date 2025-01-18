@@ -58,13 +58,37 @@
         /* Fareyi takip eden fotoğraf stili */
         .floating-photo {
             position: absolute;
-            width: 100px; /* Fotoğraf genişliği */
+            width: 50px; /* Fotoğraf genişliği küçültüldü */
             height: auto;
             pointer-events: none; /* Fareyle tıklanabilir olmasını engeller */
             display: none; /* Başlangıçta gizli */
             border-radius: 10px;
             z-index: 9999; /* En üstte görünsün */
         }
+
+        /* Buton stili */
+        button {
+            background-color: #00FFBC; /* Buton rengi */
+            color: black; /* Yazı rengi */
+            border: none; /* Sınırları kaldır */
+            padding: 12px 24px; /* İç boşluk */
+            font-size: 16px; /* Yazı boyutu */
+            border-radius: 8px; /* Yuvarlatılmış köşeler */
+            cursor: pointer; /* Fare üzerine geldiğinde imleç değişsin */
+            transition: background-color 0.3s, transform 0.3s; /* Geçiş animasyonu */
+            margin: 20px; /* Buton etrafında boşluk */
+            display: inline-block; /* Butonu hizalamak için */
+        }
+
+        button:hover {
+            background-color: #009C7F; /* Hover durumunda renk değişimi */
+            transform: scale(1.05); /* Butonu büyütme efekti */
+        }
+
+        button:focus {
+            outline: none; /* Butonun tıklandığında kenarlık görünmesini engeller */
+        }
+
     </style>
 </head>
 <body>
@@ -114,4 +138,3 @@
 
 </body>
 </html>
-            
