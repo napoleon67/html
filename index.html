@@ -10,18 +10,27 @@
             margin: 0;
             padding: 0;
             height: 100%; /* Sayfa yüksekliği %100 yapıldı */
-            display: flex; /* Flexbox düzeni ile tüm öğeleri ortalayacağız */
-            flex-direction: column; /* Yatayda değil, dikeyde düzeni sağla */
-            justify-content: center; /* Dikeyde ortalama */
-            align-items: center; /* Yatayda ortalama */
+            display: flex;
+            flex-direction: column; /* Sayfayı dikey olarak düzenleriz */
+            justify-content: space-between; /* İçeriği üstte ve altta ortalarız */
             background-color: #A9FFE9;
             color: #333;
             font-family: Arial, sans-serif;
         }
 
-        header, main, footer {
+        main {
+            flex-grow: 1; /* Main içeriğin sayfanın kalan kısmını almasını sağlar */
+            text-align: center;
+        }
+
+        header, footer {
             width: 100%; /* Bütün içerik genişliğini kullanacak şekilde ayarlandı */
-            text-align: center; /* Yazılar ortalandı */
+            text-align: center;
+        }
+
+        footer {
+            padding: 10px 0;
+            background-color: #00FFBC;
         }
 
         /* Fotoğraf stili */
