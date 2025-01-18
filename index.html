@@ -6,12 +6,14 @@
     <title>frame-bank</title>
     <link rel="icon" type="image/x-icon" href="Başlıksız1_20250117211811.ico">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        html, body {
             margin: 0;
             padding: 0;
             background-color: #A9FFE9;
             color: #333;
+            font-family: Arial, sans-serif;
+            height: 100%; /* Tam yükseklik */
+            overflow-y: auto; /* Dikey kaydırma çubuğu */
         }
 
         header {
@@ -31,9 +33,8 @@
             color: black;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
+            position: relative; /* Sabit yerine sayfanın akışında kalır */
             width: 100%;
-            bottom: 0;
         }
 
         a {
@@ -81,7 +82,7 @@
     </header>
 
     <main>
-        <h2>frame bank это первый банк не на денгах.</h2>
+        <h2>frame bank это первый банк не на деньгах.</h2>
         <p>этот банк работает на кредитах</p>
 
         <!-- Fotoğrafları ekliyoruz -->
