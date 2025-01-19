@@ -9,29 +9,29 @@
         html, body {
             margin: 0;
             padding: 0;
-            height: 100%; /* Sayfa yüksekliği %100 yapıldı */
+            height: 100%;
             display: flex;
-            flex-direction: column; /* Sayfayı dikey olarak düzenleriz */
-            justify-content: space-between; /* İçeriği üstte ve altta ortalarız */
+            flex-direction: column;
+            justify-content: space-between;
             background-color: #A9FFE9;
             color: #333;
             font-family: Arial, sans-serif;
         }
 
         main {
-            flex-grow: 1; /* Main içeriğin sayfanın kalan kısmını almasını sağlar */
+            flex-grow: 1;
             display: flex;
-            flex-direction: column; /* Dikey hizalama */
-            justify-content: center; /* Yatay ve dikey ortalamayı sağlar */
-            align-items: center; /* Yatayda ortalamayı sağlar */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 20px; /* İçeriğe genel boşluk ekledik */
-            max-width: 1200px; /* İçeriğin maksimum genişliği */
-            margin: 0 auto; /* Ortalamak için */
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         header, footer {
-            width: 100%; /* Bütün içerik genişliğini kullanacak şekilde ayarlandı */
+            width: 100%;
             text-align: center;
         }
 
@@ -40,12 +40,11 @@
             background-color: #00FFBC;
         }
 
-        /* Fotoğraf stili */
         .photo-container {
             display: flex;
-            flex-direction: column; /* Görsellerin dikey sıralanmasını sağlar */
-            gap: 20px; /* Görseller arasında boşluk */
-            margin-bottom: 30px; /* Alt boşluk ekler */
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
         }
 
         .photo-container img {
@@ -53,16 +52,16 @@
             max-width: 600px;
             height: auto;
             border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Hafif gölge ekler */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        /* Super Anime Susy Boy fotoğrafı */
+        /* Anime photo styling */
         .anime-photo {
             position: relative;
-            width: 60%; /* Fotoğrafın genişliğini %60 yapalım */
-            max-width: 350px; /* Maksimum genişlik */
+            width: 40%; /* Fotoğraf genişliğini %40 yapalım */
+            max-width: 250px; /* Maksimum genişlik */
             overflow: hidden;
-            transition: opacity 0.5s ease-in-out; /* Yavaş geçiş efekti */
+            transition: opacity 0.5s ease-in-out;
         }
 
         /* Normalde görünen resim */
@@ -90,18 +89,16 @@
             opacity: 1; /* İkinci resim görünür */
         }
 
-        /* Fareyi takip eden fotoğraf stili */
         .floating-photo {
             position: absolute;
-            width: 50px; /* Fotoğraf genişliği küçültüldü */
+            width: 50px;
             height: auto;
-            pointer-events: none; /* Fareyle tıklanabilir olmasını engeller */
-            display: none; /* Başlangıçta gizli */
+            pointer-events: none;
+            display: none;
             border-radius: 10px;
-            z-index: 9999; /* En üstte görünsün */
+            z-index: 9999;
         }
 
-        /* Buton stili */
         button {
             background-color: #00FFBC;
             color: black;
@@ -128,7 +125,6 @@
             outline: none;
         }
 
-        /* Responsive (Mobil uyumlu butonlar için) */
         @media (max-width: 768px) {
             button {
                 width: 90%;
@@ -136,7 +132,6 @@
                 padding: 10px 20px;
             }
         }
-
     </style>
 </head>
 <body>
@@ -159,13 +154,12 @@
         <!-- Buton -->
         <button onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';">купить карту</button>
 
-        <!-- Birden fazla p etiketi -->
         <h3>Frame bank это банк который находится визде.</h3>
         <p>все кординаты frame bank.</p>
         <p>31,0064629, -41,2050591 , -81,4657224, -106,2719905 , 41,2294036, 29,2377597 , -52,9030583, 73,5686437</p>
         <p>                                                                     </p>
-         <p>                                                                     </p>
-         <p>работники </p>
+        <p>                                                                     </p>
+        <p>работники </p>
         
         <div class="anime-photo">
             <!-- İlk fotoğraf, fare gelince ikinci fotoğraf görünecek -->
@@ -182,7 +176,6 @@
         <p>© frame bank - Работа есть везде. Довертесь нам!</p>
     </footer>
 
-    <!-- Fareyi takip eden küçük fotoğraf -->
     <img src="Başlıksız4_20250118204203.png" alt="floating photo" class="floating-photo" id="floatingPhoto">
 
     <script>
