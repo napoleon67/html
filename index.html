@@ -56,35 +56,38 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Hafif gölge ekler */
         }
 
-        /* "Super Anime Susy Boy" Fotoğrafını Küçültme */
+        /* Super Anime Susy Boy fotoğrafı */
         .anime-photo {
-            display: flex; /* Resmi iki parçaya ayırmak için flex kullanıyoruz */
-            justify-content: center; /* Yatayda ortalamayı sağlar */
-            overflow: hidden; /* Fazla taşan kısmı gizleriz */
             position: relative;
+            width: 50%;
+            max-width: 300px;
+            overflow: hidden;
+            transition: opacity 0.5s ease-in-out; /* Yavaş geçiş efekti */
         }
 
-        .anime-photo img {
-            width: 50%; /* Fotoğrafın genişliğini %50 yapar */
-            height: auto;
-            transition: transform 0.5s ease-in-out; /* Kayma efekti için geçiş */
-            border-radius: 10px;
+        /* Normalde görünen resim */
+        .anime-photo img:first-child {
+            transition: opacity 0.5s ease-in-out;
         }
 
-        /* Fare ile üzerine gelindiğinde fotoğrafı iki parçaya ayır */
-        .anime-photo:hover .left,
-        .anime-photo:hover .right {
-            transform: translateX(100%); /* Parçaları sağa kaydır */
+        /* Fare ile üzerine gelindiğinde fotoğraf değişir */
+        .anime-photo:hover img:first-child {
+            opacity: 0; /* İlk resim kaybolur */
         }
 
-        .anime-photo .left {
+        .anime-photo img:last-child {
             position: absolute;
+            top: 0;
             left: 0;
+            width: 100%;
+            height: auto;
+            opacity: 0; /* Başlangıçta ikinci resim gizli */
+            transition: opacity 0.5s ease-in-out;
         }
 
-        .anime-photo .right {
-            position: absolute;
-            right: 0;
+        /* Fare üzerine geldiğinde ikinci resim görünür */
+        .anime-photo:hover img:last-child {
+            opacity: 1; /* İkinci resim görünür */
         }
 
         /* Fareyi takip eden fotoğraf stili */
@@ -165,9 +168,9 @@
          <p>работники </p>
         
         <div class="anime-photo">
-            <!-- Resmi iki parçaya ayırıyoruz -->
-            <img src="WhatsApp Image 2025-01-18 at 20.03.31.jpeg" alt="Super Anime Susy Boy" class="left">
-            <img src="WhatsApp Image 2025-01-18 at 20.03.31.jpeg" alt="Super Anime Susy Boy" class="right">
+            <!-- İlk fotoğraf, fare gelince ikinci fotoğraf görünecek -->
+            <img src="WhatsApp Image 2025-01-18 at 20.03.31.jpeg" alt="Super Anime Susy Boy">
+            <img src="Başlıksız5_20250119152709.jpeg" alt="Super Anime Susy Boy 2">
         </div>
         
         <p>super anime susy boy</p>
@@ -200,3 +203,4 @@
 
 </body>
 </html>
+
