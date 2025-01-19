@@ -58,9 +58,16 @@
         /* Anime photo styling */
         .anime-photo {
             position: relative;
-            width: 20%; /* Fotoğraf genişliğini %40 yapalım */
-            max-width: 125px; /* Maksimum genişlik */
+            width: 40%; /* Fotoğraf genişliğini %40 yapalım */
+            max-width: 250px; /* Maksimum genişlik */
+            height: auto;
             overflow: hidden;
+        }
+
+        .anime-photo img {
+            width: 100%; /* Resmin genişliği container'a göre ayarlanacak */
+            height: 100%; /* Yükseklik de container'a göre ayarlanacak */
+            object-fit: contain; /* Fotoğrafın orantılı şekilde görünmesini sağlar, kesilmez */
             transition: opacity 0.5s ease-in-out;
         }
 
