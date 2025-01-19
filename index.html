@@ -11,8 +11,8 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern bir font */
-            background-color: #F2F2F2; /* Soft gri bir arka plan */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+            background-color: #F5F5F5; /* Soft gri arka plan */
             color: #333;
             line-height: 1.6;
         }
@@ -28,12 +28,12 @@
             width: 100%;
             text-align: center;
             padding: 20px 0;
-            background-color: #1C1C1C; /* Koyu arka plan */
+            background-color: #2C3E50; /* Koyu mavi-yeşil tonları */
             color: white;
         }
 
         header h1 {
-            font-size: 3rem; /* Daha büyük başlık */
+            font-size: 3rem;
             margin: 0;
             font-weight: 600;
         }
@@ -56,7 +56,7 @@
 
         h2 {
             font-size: 2.5rem;
-            color: #333;
+            color: #34495E; /* Daha koyu mavi-yeşil */
         }
 
         p {
@@ -76,7 +76,7 @@
 
         /* Buton stili */
         button {
-            background-color: #009C7F; /* Modern yeşil tonları */
+            background-color: #00A99D; /* Canlı bir yeşil tonu */
             color: white;
             border: none;
             padding: 15px 30px;
@@ -89,7 +89,7 @@
         }
 
         button:hover {
-            background-color: #006F59; /* Hover durumunda daha koyu yeşil */
+            background-color: #009B8E; /* Hover efektiyle daha koyu bir ton */
             transform: scale(1.05);
         }
 
@@ -124,6 +124,20 @@
             color: #ddd;
         }
 
+        /* Footer altındaki fotoğraf */
+        .footer-photo-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .footer-photo-container img {
+            width: 80%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
     </style>
 </head>
 <body>
@@ -155,6 +169,11 @@
 
     <footer>
         <p>© frame bank - Работа есть везде. Довертесь нам!</p>
+
+        <!-- Footer altındaki yazılı fotoğraf -->
+        <div class="footer-photo-container">
+            <img src="footer-photo.png" alt="Footer Photo">
+        </div>
     </footer>
 
     <!-- Fareyi takip eden küçük fotoğraf -->
