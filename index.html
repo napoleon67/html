@@ -57,19 +57,34 @@
         }
 
         /* "Super Anime Susy Boy" Fotoğrafını Küçültme */
-        .anime-photo img {
-            width: 50%; /* Fotoğrafın genişliğini %50 yapar */
-            max-width: 300px; /* Maksimum genişlik ayarlandı */
-            height: auto;
-            border-radius: 10px;
-            margin-top: 20px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            transition: width 0.3s ease-in-out; /* Genişlik değişimini yumuşatarak geçiş efekti ekledik */
+        .anime-photo {
+            display: flex; /* Resmi iki parçaya ayırmak için flex kullanıyoruz */
+            justify-content: center; /* Yatayda ortalamayı sağlar */
+            overflow: hidden; /* Fazla taşan kısmı gizleriz */
+            position: relative;
         }
 
-        /* Super Anime Susy Boy resmine fare ile geldiğinde genişliği ikiye böl */
-        .anime-photo img:hover {
-            width: 100%; /* Fare geldiğinde genişliği %100 yapar */
+        .anime-photo img {
+            width: 50%; /* Fotoğrafın genişliğini %50 yapar */
+            height: auto;
+            transition: transform 0.5s ease-in-out; /* Kayma efekti için geçiş */
+            border-radius: 10px;
+        }
+
+        /* Fare ile üzerine gelindiğinde fotoğrafı iki parçaya ayır */
+        .anime-photo:hover .left,
+        .anime-photo:hover .right {
+            transform: translateX(100%); /* Parçaları sağa kaydır */
+        }
+
+        .anime-photo .left {
+            position: absolute;
+            left: 0;
+        }
+
+        .anime-photo .right {
+            position: absolute;
+            right: 0;
         }
 
         /* Fareyi takip eden fotoğraf stili */
@@ -149,13 +164,15 @@
          <p>                                                                     </p>
          <p>работники </p>
         
-          <div class="anime-photo">
-            <img src="WhatsApp Image 2025-01-18 at 20.03.31.jpeg" alt="Super Anime Susy Boy">
+        <div class="anime-photo">
+            <!-- Resmi iki parçaya ayırıyoruz -->
+            <img src="WhatsApp Image 2025-01-18 at 20.03.31.jpeg" alt="Super Anime Susy Boy" class="left">
+            <img src="WhatsApp Image 2025-01-18 at 20.03.31.jpeg" alt="Super Anime Susy Boy" class="right">
         </div>
         
         <p>super anime susy boy</p>
         
-            <button onclick="window.location.href='https://pump.fun/coin/3nqtRT5SxXmabRceU7unah6fz8sL14BnECbRk1kbpump';">крипта !!!!</button>
+        <button onclick="window.location.href='https://pump.fun/coin/3nqtRT5SxXmabRceU7unah6fz8sL14BnECbRk1kbpump';">крипта !!!!</button>
     </main>
 
     <footer>
