@@ -6,63 +6,31 @@
     <title>frame-bank</title>
     <link rel="icon" type="image/x-icon" href="Başlıksız1_20250117211811.ico">
     <style>
-        /* Genel ayar */
         html, body {
             margin: 0;
             padding: 0;
-            height: 100%;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
-            background-color: #2D3E50; /* Koyu gri arka plan */
-            color: #F5F5F5; /* Açık gri yazı rengi */
-            line-height: 1.6;
+            height: 100%; /* Sayfa yüksekliği %100 yapıldı */
+            display: flex;
+            flex-direction: column; /* Sayfayı dikey olarak düzenleriz */
+            justify-content: space-between; /* İçeriği üstte ve altta ortalarız */
+            background-color: #A9FFE9;
+            color: #333;
+            font-family: Arial, sans-serif;
         }
 
-        /* Sayfa genel düzeni */
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        main {
+            flex-grow: 1; /* Main içeriğin sayfanın kalan kısmını almasını sağlar */
+            text-align: center;
         }
 
         header, footer {
-            width: 100%;
+            width: 100%; /* Bütün içerik genişliğini kullanacak şekilde ayarlandı */
             text-align: center;
-            padding: 20px 0;
-            background-color: #1A242F; /* Koyu gri-yeşil tonları */
-            color: white;
         }
 
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-            font-weight: 600;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin: 10px 0;
-        }
-
-        /* Ana içerik alanı */
-        main {
-            flex-grow: 1;
-            text-align: center;
-            padding: 40px 20px;
-            background-color: #34495E; /* Koyu mavi-yeşil ton */
-            border-radius: 15px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-            margin: 20px;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            color: #FFBB33; /* Altın sarısı başlık rengi */
-        }
-
-        p {
-            font-size: 1.1rem;
-            color: #DDDDDD; /* Açık gri yazı rengi */
-            margin: 20px 0;
+        footer {
+            padding: 10px 0;
+            background-color: #00FFBC;
         }
 
         /* Fotoğraf stili */
@@ -70,26 +38,41 @@
             width: 80%;
             max-width: 600px;
             height: auto;
-            border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        /* Fareyi takip eden fotoğraf stili */
+        .floating-photo {
+            position: absolute;
+            width: 50px; /* Fotoğraf genişliği küçültüldü */
+            height: auto;
+            pointer-events: none; /* Fareyle tıklanabilir olmasını engeller */
+            display: none; /* Başlangıçta gizli */
+            border-radius: 10px;
+            z-index: 9999; /* En üstte görünsün */
         }
 
         /* Buton stili */
         button {
-            background-color: #00A99D; /* Canlı bir yeşil tonu */
-            color: white;
+            background-color: #00FFBC;
+            color: black;
             border: none;
-            padding: 15px 30px;
-            font-size: 1.1rem;
-            border-radius: 50px;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            margin: 30px 0;
-            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s ease-in-out;
+            display: inline-block;
+            text-align: center;
+            width: auto;
+            max-width: 300px;
+            margin: 20px;
+            box-sizing: border-box;
         }
 
         button:hover {
-            background-color: #009B8E; /* Hover efektiyle daha koyu bir ton */
+            background-color: #009C7F;
             transform: scale(1.05);
         }
 
@@ -97,15 +80,14 @@
             outline: none;
         }
 
-        /* Responsive butonlar */
+        /* Responsive (Mobil uyumlu butonlar için) */
         @media (max-width: 768px) {
             button {
                 width: 90%;
-                font-size: 1rem;
-                padding: 12px 24px;
+                font-size: 14px;
+                padding: 10px 20px;
             }
         }
-
     </style>
 </head>
 <body>
@@ -132,11 +114,11 @@
         <p>Frame bank это банк который находится визде.</p>
         <p>все кординаты frame bank.</p>
         <p>31,0064629, -41,2050591 , -81,4657224, -106,2719905 , 41,2294036, 29,2377597 , -52,9030583, 73,5686437</p>
-
+        
     </main>
 
     <footer>
-        <p>© frame bank - Работа есть везде. Довертесь нам!</p>
+        <p>© frame bank  работа есть везде - довертесь нам!</p>
     </footer>
 
     <!-- Fareyi takip eden küçük fotoğraf -->
@@ -160,4 +142,3 @@
 
 </body>
 </html>
-
