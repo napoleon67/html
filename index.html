@@ -12,8 +12,8 @@
             padding: 0;
             height: 100%;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
-            background-color: #F5F5F5; /* Soft gri arka plan */
-            color: #333;
+            background-color: #2D3E50; /* Koyu gri arka plan */
+            color: #F5F5F5; /* Açık gri yazı rengi */
             line-height: 1.6;
         }
 
@@ -28,7 +28,7 @@
             width: 100%;
             text-align: center;
             padding: 20px 0;
-            background-color: #2C3E50; /* Koyu mavi-yeşil tonları */
+            background-color: #1A242F; /* Koyu gri-yeşil tonları */
             color: white;
         }
 
@@ -48,7 +48,7 @@
             flex-grow: 1;
             text-align: center;
             padding: 40px 20px;
-            background-color: white;
+            background-color: #34495E; /* Koyu mavi-yeşil ton */
             border-radius: 15px;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
             margin: 20px;
@@ -56,12 +56,12 @@
 
         h2 {
             font-size: 2.5rem;
-            color: #34495E; /* Daha koyu mavi-yeşil */
+            color: #FFBB33; /* Altın sarısı başlık rengi */
         }
 
         p {
             font-size: 1.1rem;
-            color: #555;
+            color: #DDDDDD; /* Açık gri yazı rengi */
             margin: 20px 0;
         }
 
@@ -106,25 +106,7 @@
             }
         }
 
-        /* Fareyi takip eden küçük fotoğraf */
-        .floating-photo {
-            position: absolute;
-            width: 50px;
-            height: auto;
-            pointer-events: none;
-            display: none;
-            border-radius: 12px;
-            z-index: 9999;
-            transition: transform 0.2s ease;
-        }
-
-        /* Footer metni */
-        footer p {
-            font-size: 1.1rem;
-            color: #ddd;
-        }
-
-        /* Footer altındaki fotoğraf */
+        /* Footer altındaki yazılı fotoğraf */
         .footer-photo-container {
             margin-top: 20px;
             text-align: center;
@@ -164,16 +146,15 @@
         <p>Frame bank это банк который находится визде.</p>
         <p>все кординаты frame bank.</p>
         <p>31,0064629, -41,2050591 , -81,4657224, -106,2719905 , 41,2294036, 29,2377597 , -52,9030583, 73,5686437</p>
-        
+
+        <!-- Fotoğraf en altta -->
+        <div class="footer-photo-container">
+            <img src="footer-photo.png" alt="Footer Photo">
+        </div>
     </main>
 
     <footer>
         <p>© frame bank - Работа есть везде. Довертесь нам!</p>
-
-        <!-- Footer altındaki yazılı fotoğraf -->
-        <div class="footer-photo-container">
-            <img src="footer-photo.png" alt="Footer Photo">
-        </div>
     </footer>
 
     <!-- Fareyi takip eden küçük fotoğraf -->
@@ -197,3 +178,4 @@
 
 </body>
 </html>
+
