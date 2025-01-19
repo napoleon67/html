@@ -21,6 +21,9 @@
         main {
             flex-grow: 1; /* Main içeriğin sayfanın kalan kısmını almasını sağlar */
             text-align: center;
+            padding: 20px; /* İçeriğe genel boşluk ekledik */
+            max-width: 1200px; /* İçeriğin maksimum genişliği */
+            margin: 0 auto; /* Ortalamak için */
         }
 
         header, footer {
@@ -34,12 +37,19 @@
         }
 
         /* Fotoğraf stili */
+        .photo-container {
+            display: flex;
+            flex-direction: column; /* Görsellerin dikey sıralanmasını sağlar */
+            gap: 20px; /* Görseller arasında boşluk */
+            margin-bottom: 30px; /* Alt boşluk ekler */
+        }
+
         .photo-container img {
             width: 80%;
             max-width: 600px;
             height: auto;
-            margin-top: 20px;
             border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Hafif gölge ekler */
         }
 
         /* "Super Anime Susy Boy" Fotoğrafını Küçültme */
@@ -162,4 +172,5 @@
 
 </body>
 </html>
+
 
