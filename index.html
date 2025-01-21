@@ -132,11 +132,18 @@
         }
 
         main img {
-            width: 100%; /* Fotoğrafın genişliği %100 olacak şekilde ayarlandı */
-            max-width: 1500px; /* Maksimum genişlik sınırlandı */
-            height: auto; /* Yükseklik otomatik olacak */
-            display: block; /* Fotoğraf etrafındaki boşluğu ortadan kaldırır */
-            margin: 0 auto; /* Ortalanmış olur */
+            width: 100%;
+            max-width: 1500px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Fotoğrafı sağa kaydırmak için */
+        main img#floatingPhoto {
+            margin-left: auto;
+            margin-right: 0;
+            display: block;
         }
 
         @media (max-width: 768px) {
@@ -206,4 +213,3 @@
 
 </body>
 </html>
-
